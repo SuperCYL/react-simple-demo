@@ -29,6 +29,7 @@ export const post = async (api, params) => {
     return new Promise((resolve, reject) => {
         instance.post(api, params)
             .then(res => {
+                console.log('11111',res.data);
                 resolve(res.data)
             })
             .catch(error => {
