@@ -1,6 +1,8 @@
 import React from 'react'
 import {Table, Icon} from 'antd'
 
+import {notJmlogin} from '../API/api'
+
 export default class myTable extends React.Component {
     constructor(props) {
         super(props)
@@ -11,6 +13,31 @@ export default class myTable extends React.Component {
     }
 
     componentDidMount() {
+            let params = {
+              username: 'admin',
+              deviceId: '',
+              password: 'admin',
+              validCode: ''
+            };
+            notJmlogin(params).then(res => {
+                debugger
+              if (res.resp_code == 200 || res.resp_code == 0) {
+                
+                
+              } else {
+                
+              }
+            })
+          
+        // Net(notJmlogin, { userId: 'admin', password: 'admin' })
+        //     .then(res => {
+        //         debugger;
+        //         console.log(res);
+        //     })
+        //     .catch(err => {
+        //         console.log(err);
+        // })
+
         const data = []
 
         for (let i = 0; i < 46; i++) {

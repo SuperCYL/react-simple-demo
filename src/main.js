@@ -35,6 +35,7 @@ const ACTIVE = { color: 'red' }
 // 配置导航
 class Sider extends React.Component {
     constructor(props) {
+        debugger;
         super(props)
         this.state = {
             current: '',
