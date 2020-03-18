@@ -25,9 +25,20 @@ instance.interceptors.response.use(function (response) {
 });
 
 
-export const Net = async (api, params) => {
+export const post = async (api, params) => {
     return new Promise((resolve, reject) => {
         instance.post(api, params)
+            .then(res => {
+                resolve(res.data)
+            })
+            .catch(error => {
+                reject(error)
+            })
+    })
+}
+export const get = async (api, params) => {
+    return new Promise((resolve, reject) => {
+        instance.get(api, params)
             .then(res => {
                 resolve(res.data)
             })

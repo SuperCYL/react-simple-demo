@@ -20,9 +20,8 @@ export default class myTable extends React.Component {
               validCode: ''
             };
             notJmlogin(params).then(res => {
-                debugger
               if (res.resp_code == 200 || res.resp_code == 0) {
-                
+                debugger
                 
               } else {
                 
