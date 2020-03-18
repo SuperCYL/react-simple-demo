@@ -28,14 +28,6 @@ export default class myTable extends React.Component {
               }
             })
           
-        // Net(notJmlogin, { userId: 'admin', password: 'admin' })
-        //     .then(res => {
-        //         debugger;
-        //         console.log(res);
-        //     })
-        //     .catch(err => {
-        //         console.log(err);
-        // })
 
         const data = []
 
